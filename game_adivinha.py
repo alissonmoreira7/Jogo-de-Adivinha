@@ -50,3 +50,30 @@ if dificuldade ==  1:
              print('Saindo...')
              break
     print('Programa finalizado!')
+
+elif dificuldade == 2:
+   tentar_nv = 'sim'
+   while tentar_nv == 'sim':
+        nums = list(range(1, 101))
+        escolha_pc = random.choice(nums)
+
+        while True:
+            escolha_user = int(input('Escolha um número entre 1 e 100: '))
+            if escolha_user not in range(1, 101):
+                print('Número escolhido inválido!!')
+            if escolha_user in range(1, 101):
+                break
+        
+        print(f'Sua escolha final foi {escolha_user} e a escolha do seu oponente {escolha_pc}.')
+
+        if escolha_user == escolha_pc:
+            print('Parabéns, você acertou!!')
+        else:
+            print('Infelizmente, você perdeu!')
+
+        tentar_nv = input('Você deseja tentar novamente? [Sim / Não]: ').lower().strip()
+
+        if tentar_nv != 'sim':
+             print('Saindo...')
+             break
+        print('Programa finalizado!')
